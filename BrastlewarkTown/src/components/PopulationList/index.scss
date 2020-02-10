@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Merienda+One|Montserrat&display=swap');
+$mainWidth: 80%;
+
+$card-size: 12rem;
+$flip-duration: 1s;
+$perspective: 15rem;
+$degree: 90deg;
+
+
+$title-color: #706c61;
+$secondary-color: #706c61;
+$white: #ffffff;
+$back-color: #e1f4f3;
+$font-title: 'Merienda One', cursive;
+$font-content: 'Montserrat', sans-serif;
+$mainFont: 'Montserrat', sans-serif;
+
+
+.profileList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  margin: 1rem;
+  display: inline-block;
+  cursor: pointer;
+  background-repeat: no-repeat;
+}
