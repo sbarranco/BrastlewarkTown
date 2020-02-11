@@ -9,7 +9,10 @@ function ModalFilter({ close, filterCallback }) {
         let name = e.target.name
         let value = e.target.value
         if (name === 'age' || name === 'weight') {
-            setForm({ ...form, [name]: Number(value) })
+            value = value.replace(/\D/,'')
+            if (value !== '' || value !== 0) {
+                setForm({ ...form, [name]: Number(value) })
+            }           
         } else {
             let upLetter = value.substring(0, 1).toUpperCase()
             let lowLetters = value.substring(1).toLowerCase()
