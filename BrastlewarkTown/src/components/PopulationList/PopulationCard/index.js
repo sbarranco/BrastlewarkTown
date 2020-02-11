@@ -2,36 +2,25 @@ import React, { useState} from 'react';
 
 function PopulationCard({item}) {
 
-    const [flipped, setFlipped] = useState(false)
-    const [clicked, setClicked] = useState(false)
-
-    const isFlip = () => {
-        setFlipped(!flipped)
-        setClicked(!clicked)
-    }
-
-    const style = {
-        backgroundSize: '100%',
-        backgroundImage: 'url(' + item.thumbnail + ')',
-        backgroundRepeat: 'noRepeat',
-        backgroundPosition: 'center top'
-
-    };
-
   return (
-
-        <div>
-            <div style={style} className="card" onClick={isFlip}>
-                <div  className="front">
-                <h5>{item.name}</h5>
-                </div>
-                <div className="back">
-
-                </div>
-            </div>
-        </div>
-
-
+    <div className="flip-card">
+    <div className="flip-card-inner">
+      <div className="flip-card-front">
+        <img src={item.thumbnail} alt="Avatar" style={{width:'100%', height:'100%'}}/>  
+        <div className="name">{item.name}</div>       
+      </div>
+      <div className="flip-card-back">
+        <div className="back-content">    
+        <div><strong>Age: </strong>{item.age}</div>
+        <div><strong>Weight: </strong>{item.weight}</div>
+        <div><strong>Height: </strong>{item.height}</div>
+        <div><strong>Hair Color: </strong>{item.hair_color}</div>
+        <div><strong>Professions: </strong>{item.professions.length > 0 ? item.professions.join(", ") : "No profession"}</div>
+        <div><strong>Friends: </strong>{item.friends.length > 0 ? item.friends.join(", ") : "No friends"}</div>
+        </div> 
+      </div>
+    </div>
+  </div>
   );
 }
 

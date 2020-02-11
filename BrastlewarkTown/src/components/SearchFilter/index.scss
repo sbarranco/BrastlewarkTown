@@ -3,6 +3,7 @@ $mainWidth: 80%;
 
 $title-color: #706c61;
 $white: #ffffff;
+$blue : #00B4CC;
 $title-color: #706c61;
 $secondary-color: #333333;
 $white: #ffffff;
@@ -15,7 +16,7 @@ $mainFont: 'Montserrat', sans-serif;
 
 
 form {
-  margin: 30px auto 110px;
+  margin: auto auto 20px auto;
   .search{
     width: 100%;
     position: relative;
@@ -23,8 +24,8 @@ form {
     justify-content: center;
     .searchInput {
       font-family: $font-content;
-      width: 70%;
-      border: 3px solid #00B4CC;
+      width: 75%;
+      border: 3px solid $blue;
       border-right: none;
       padding: 5px;
       height: 20px;
@@ -35,7 +36,7 @@ form {
     .searchBtn {
       width: 40px;
       height: 36px;
-      border: 1px solid #00B4CC;
+      border: 1px solid $blue;
       background: #00B4CC;
       text-align: center;
       color: #fff;
@@ -68,7 +69,7 @@ form {
     color: #222;
   }
   .isChecked{
-    background-color: #00B4CC;
+    background-color: $blue;
     color: white;
     text-shadow: 0 -1px hsla(0, 0%, 0%, 0.8);
   }

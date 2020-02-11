@@ -1,16 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Merienda+One|Montserrat&display=swap');
-$mainWidth: 80%;
 
-$card-size: 12rem;
-$flip-duration: 1s;
-$perspective: 15rem;
-$degree: 90deg;
-
-
-$title-color: #706c61;
+$title-color: #6d3939;
 $secondary-color: #706c61;
 $white: #ffffff;
-$back-color: #e1f4f3;
+$blue : #00B4CC;
 $font-title: 'Merienda One', cursive;
 $font-content: 'Montserrat', sans-serif;
 $mainFont: 'Montserrat', sans-serif;
@@ -22,9 +15,63 @@ $mainFont: 'Montserrat', sans-serif;
   justify-content: center;
 }
 
-.card {
-  margin: 1rem;
-  display: inline-block;
-  cursor: pointer;
-  background-repeat: no-repeat;
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; 
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; 
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: $secondary-color;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color:$title-color;
+  color: $white;
+  transform: rotateY(180deg);
+  text-align: left;
+
+  .back-content{
+    margin: 1rem;
+    font-size: 14px;
+  }
+}
+
+.name {
+  font-weight: bold;
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;
+  background-color: #e0dcdc85;
+
 }

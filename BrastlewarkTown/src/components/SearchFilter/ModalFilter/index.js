@@ -4,7 +4,6 @@ import './index.scss'
 function ModalFilter({ close, filterCallback }) {
 
     const [form, setForm] = useState({})
-    //TODO hacer funcion para que envie con camel case las cosas
 
     const onInputChange = (e) => {
         let name = e.target.name
@@ -37,7 +36,7 @@ function ModalFilter({ close, filterCallback }) {
                     name="friends" onChange={(e) => onInputChange(e)}></input>
             </div>
             <button type='button' className="btn isChecked"
-                onClick={() => {                    
+                onClick={() => {
                     filterCallback(form)
                     close()
                 }}>
