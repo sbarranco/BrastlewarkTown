@@ -45,7 +45,7 @@ function SearchFilter({ data, callBack }) {
         let filtered = data.filter(obj => {
             for (let key in form) {
                 if ((typeof obj[key] === 'number' && obj[key] !== form[key]) ||
-                   (typeof obj[key] === 'string' && obj[key] !== form[key])) {
+                    (typeof obj[key] === 'string' && obj[key] !== form[key])) {
                     return false
                 }
                 if (typeof obj[key] === 'object' && !obj[key].includes(form[key])) {

@@ -22,20 +22,20 @@ function ModalFilter({ close, filterCallback }) {
 
     return (
         <div className="modal">
-            <a className="close" onClick={close}>
+            <button className="close"  onClick={close}>
                 &times;
-        </a>
+        </button>
             <div className="header">Filter population</div>
             <div className="content">
-                <input value={form.age} type="text" placeholder="Age" className="modalInput"
+                <input value={form.age || ''} type="text" placeholder="Age" className="modalInput"
                     name="age" onChange={(e) => onInputChange(e)}></input>
-                <input value={form.weight} type="text" placeholder="Weight" className="modalInput"
+                <input value={form.weight || ''} type="text" placeholder="Weight" className="modalInput"
                     name="weight" onChange={(e) => onInputChange(e)}></input>
-                <input value={form.height} type="text" placeholder="Hair color" className="modalInput"
+                <input value={form.height || ''} type="text" placeholder="Hair color" className="modalInput"
                     name="hair_color" onChange={(e) => onInputChange(e)}></input>
-                <input value={form.profession} type="text" placeholder="Profession" className="modalInput"
+                <input value={form.profession || ''} type="text" placeholder="Profession" className="modalInput"
                     name="professions" onChange={(e) => onInputChange(e)}></input>
-                <input value={form.friend} type="text" placeholder="Friend of" className="modalInput"
+                <input value={form.friend || ''} type="text" placeholder="Friend of" className="modalInput"
                     name="friends" onChange={(e) => onInputChange(e)}></input>
             </div>
             <button type='button' className="btn isChecked"

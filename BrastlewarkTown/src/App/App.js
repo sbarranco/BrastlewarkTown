@@ -52,7 +52,7 @@ function App() {
       }} />
       <hr />
       <Loader isLoading={isLoading}>
-        {data.length === 0 && !isLoading ? "No results found" : <PopulationList data={dataFilter} />}
+        {(data.length === 0 && !isLoading) || (dataFilter.length === 0) ? "No results found" : <PopulationList data={dataFilter} />}
       </Loader>
     </div>
   );
