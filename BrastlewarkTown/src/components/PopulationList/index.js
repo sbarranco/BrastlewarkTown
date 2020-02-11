@@ -1,18 +1,29 @@
-import React, {useEffect, useContext} from 'react';
+import React, {useState} from 'react';
 import PopulationCard from "./PopulationCard";
+import Pagination from '../Commons/Pagination'
 import './index.scss'
 
 function PopulationList({data}) {
 
-    //pagination y contenedor pagina
+    const [pag, setPag] = useState(1)    
+
+    const onPagination = (pag) => {
+    setPag(pag)
+    }
+    let dataPerPag = data.slice( (pag - 1) * 16, ((pag - 1) * 16) + 16)
 
     return (
         <div className='profileList'>
-            {!!data && data.map((item, index) => {
+            {!!dataPerPag && dataPerPag.map((item, index) => {
                 return (
                     <PopulationCard item={item} key={index}/>
                 )
             }) }
+            {data.length > 16 ? <Pagination
+                total={data.length}
+                itemsPag={16}
+                pag={pag}
+                onPagination={onPagination}/> : null}
 
         </div>
     );

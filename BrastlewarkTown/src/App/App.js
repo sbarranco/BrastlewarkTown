@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './App.scss';
-import Logo from '../images/escudo_logo.png'
 import axios from 'axios';
 import Swal from 'sweetalert2';
 import Loader from './../components/Commons/Loader';
@@ -14,7 +13,6 @@ function App() {
   const url = `https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json`
 
   useEffect(() => {
-    
     getDataElements()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
@@ -31,14 +29,14 @@ function App() {
         Swal.fire({
           type: 'error',
           title: 'Oops...',
-          text: 'Something went wrong!'          
+          text: 'Something went wrong!'
         })
       }
     } catch (e) {
       Swal.fire({
         type: 'error',
         title: 'Oops...',
-        text: e.message          
+        text: e.message
       })
     }
     setIsLoading(false)
@@ -47,14 +45,14 @@ function App() {
   return (
     <div className="App">
       <div className='header'>
-        <h1 className="title">Brastlewark Town</h1>        
+        <h1 className="title">Brastlewark Town</h1>
       </div>
       <SearchFilter data={data} callBack={(newData) => {
         setDataFilter(newData)
-      }}/>
-      <hr/>
+      }} />
+      <hr />
       <Loader isLoading={isLoading}>
-      {data.length === 0 ? "No results found" : <PopulationList data={dataFilter}/>} 
+        {data.length === 0 && !isLoading ? "No results found" : <PopulationList data={dataFilter} />}
       </Loader>
     </div>
   );

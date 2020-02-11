@@ -1,24 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Merienda+One|Montserrat&display=swap');
-$mainWidth: 80%;
 
 $title-color: #706c61;
 $white: #ffffff;
-$title-color: #706c61;
 $secondary-color: #333333;
 $white: #ffffff;
 $back-color: #e1f4f3;
-$red: #e0000e;
-$yellow: #fddb3a;
-$font-title: 'Merienda One', cursive;
 $font-content: 'Montserrat', sans-serif;
-$mainFont: 'Montserrat', sans-serif;
 
 .modal {
     font-size: 12px;
   }
   .modal > .header {
     width: 100%;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid $title-color;
     font-size: 18px;
     text-align: center;
     padding: 5px;
@@ -45,9 +39,9 @@ $mainFont: 'Montserrat', sans-serif;
     right: -10px;
     top: -10px;
     font-size: 24px;
-    background: #ffffff;
+    background: $white;
     border-radius: 18px;
-    border: 1px solid #cfcece;
+    border: 1px solid $back-color;
   }
   .modalInput {
     font-family: $font-content;    

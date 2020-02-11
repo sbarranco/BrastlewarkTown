@@ -5,7 +5,7 @@ import LoadingOverlay from "react-loading-overlay";
 function Loader({isLoading, children}) {
 
     return (
-        <LoadingOverlay active={isLoading} spinner={<PacmanLoader color={"#FFDA36"} margin={'3px'}/>}
+        <LoadingOverlay active={isLoading} spinner={<PacmanLoader color={"#6d3939"} margin={'3px'}/>}
                         styles={{
                             overlay: (base) => ({
                                 ...base,
