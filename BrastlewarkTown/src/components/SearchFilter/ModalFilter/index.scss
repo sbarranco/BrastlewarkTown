@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Merienda+One|Montserrat&display=swap');
+
+$title-color: #706c61;
+$white: #ffffff;
+$secondary-color: #333333;
+$white: #ffffff;
+$back-color: #e1f4f3;
+$font-content: 'Montserrat', sans-serif;
+
+.modal {
+    font-size: 12px;
+  }
+  .modal > .header {
+    width: 100%;
+    border-bottom: 1px solid $title-color;
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+  }
+  .modal > .content {
+    text-align: center;
+    margin-left: 0.5rem;
+    width: 80%;
+  }
+  .modal > .actions {
+    margin: auto;
+  }
+  .modal > .actions {
+    width: 100%;
+    padding: 10px 5px;
+    text-align: center;
+  }
+  .modal > .close {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    padding: 2px 5px;
+    line-height: 20px;
+    right: -10px;
+    top: -10px;
+    font-size: 24px;
+    background: $white;
+    border-radius: 18px;
+    border: 1px solid $back-color;
+  }
+  .modalInput {
+    font-family: $font-content;    
+    width: 100%;
+    margin: 0.3rem;
+    border: 1px solid $back-color;
+    padding: 0.2rem;
+    height: 20px;
+    border-radius: 5px 5px 5px 5px;
+    outline: none;
+    color: $title-color;
+    cursor: pointer;
+  }
