@@ -3,7 +3,7 @@
 The heroes, from a fantasy role-playing game, don't know the local population of the last town they've visited.
 Since they have a lot of work defending the town, I have created an application so they can meet the inhabitants.
 
-This project has been developed for the AXA Frontend code assessment.
+This project has been developed for a Frontend code assessment.
 
 ## Screenshoot
 
